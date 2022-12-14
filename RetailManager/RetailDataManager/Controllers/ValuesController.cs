@@ -14,7 +14,7 @@ namespace RetailDataManager.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            var STRINGiD = RequestContext.Principal.Identity.GetUserId();
+            var userId = RequestContext.Principal.Identity.GetUserId();
 
             return new string[] { "value1", "value2" };
         }
@@ -26,12 +26,12 @@ namespace RetailDataManager.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void Post([FromBody] string value)
         {
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody] string value)
         {
         }
 
